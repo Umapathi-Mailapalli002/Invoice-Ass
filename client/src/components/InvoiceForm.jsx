@@ -123,7 +123,7 @@ const InvoiceForm = () => {
 
       {/* Display the total amount */}
       <p className="text-lg font-medium text-gray-800 dark:text-white mt-4">
-        Total Amount: {totalAmount.toFixed(2)}
+        Total Amount: {totalAmount?.toFixed(2)}
       </p>
 
       <button
