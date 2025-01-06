@@ -6,7 +6,7 @@ export const getAllActivityLogs = createAsyncThunk(
   "activityLogs/getAllActivityLogs",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.get("/users/activities");
+      const response = await axiosInstance.get("users/activities");
       return response.data;
     } catch (error) {
       return rejectWithValue(
