@@ -6,7 +6,8 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "https://invoice-ass-client.vercel.app",
+    origin: ["https://invoice-ass-client.vercel.app"],
+    methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true, // Allows cookies to be sent
   })
 );
