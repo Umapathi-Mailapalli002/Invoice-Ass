@@ -6,7 +6,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "https://invoice-ass.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true, // Allows cookies to be sent
   })
 );
