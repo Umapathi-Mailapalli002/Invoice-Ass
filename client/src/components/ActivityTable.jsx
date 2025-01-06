@@ -8,8 +8,6 @@ function ActivityTable() {
   const [currentPageMostSold, setCurrentPageMostSold] = useState(1);
   const { activityLogs, loading } = useSelector((state) => state.activityLogs);
   const mostSales = useSelector((state) => state.sales);
-  console.log(activityLogs.data);
-  console.log(mostSales.mostSoldProducts);
   const activityData = activityLogs?.data;
   const mostSoldSales = mostSales.mostSoldProducts;
   const pageSize = 5;

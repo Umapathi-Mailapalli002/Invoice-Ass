@@ -119,22 +119,18 @@ function SalesTable() {
     if (isConfirmed) {
       dispatch(deleteSale({ id: item._id }));
       alert("Item deleted successfully.");
-      console.log("Deleted item:", item._id);
     } else {
       alert("Deletion canceled. The item was not deleted.");
-      console.log("Deletion canceled for item:", item._id);
     }
   };
 
   const handleEdit = (item) => {
     navigate("/invoice", { state: { item } });
-    console.log("Edited item:", item._id);
   };
   const handleDownload = (item) => {
     generateInvoicePDF({
       ...item,
     });
-    console.log("Delete item:", item._id);
   };
   const actions = [
     {
