@@ -25,18 +25,18 @@ app.use("/api/v1/users/sales", salesRouter);
 
 //https://localhost:6000/api/v1/users/register
 
-// app.use((err, req, res, next) => {
-//       if (err instanceof ApiError) {
-//         return res.status(err.statusCode || 500).json({
-//           success: false,
-//           message: err.message,
-//           errors: err.errors || [],
-//         });
-//       }
+app.use((err, req, res, next) => {
+      if (err instanceof ApiError) {
+        return res.status(err.statusCode || 500).json({
+          success: false,
+          message: err.message,
+          errors: err.errors || [],
+        });
+      }
 
-//       return res.status(500).json({
-//         success: false,
-//         message: err.message || 'Internal Server Error',
-//       });
-//     });
+      return res.status(500).json({
+        success: false,
+        message: err.message || 'Internal Server Error',
+      });
+    });
 export { app };
