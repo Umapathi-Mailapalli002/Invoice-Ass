@@ -9,7 +9,6 @@ const SignupModal = ({ onSwitchToLogin }) => {
     password: "",
   });
 
-  console.log({...formData})
   const state = useSelector((state) => state.userAuth);
   const dispatch = useDispatch();
   
