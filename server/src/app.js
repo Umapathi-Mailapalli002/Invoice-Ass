@@ -6,7 +6,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: 'https://invoice-ass-client.vercel.app',
+    origin: "https://invoice-ass-client.vercel.app/",
     //origin: "http://localhost:5173",
    //origin: "https://invoice-ass-client.onrender.com",
     methods: ["GET", "POST", "PATCH", "DELETE"],
