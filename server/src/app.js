@@ -8,8 +8,8 @@ app.use(
   cors({
     origin: "https://invoice-ass-client.vercel.app/",
     //origin: "http://localhost:5173",
+   // origin : "https://033c-2402-8100-21ff-c00-3da3-465d-608e-1c92.ngrok-free.app/",
    //origin: "https://invoice-ass-client.onrender.com",
-    methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
   })
 );
