@@ -29,7 +29,7 @@ export const createSale = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const response = await axiosInstance.post("users/sales/create-sale", {
+      const response = await axiosInstance.post("/users/sales/create-sale", {
         customerName,
         productName,
         price,
@@ -57,7 +57,7 @@ export const updateSale = createAsyncThunk(
   ) => {
     try {
       const response = await axiosInstance.patch(
-        `users/sales/update-sale/${id}`,
+        `/users/sales/update-sale/${id}`,
         { customerName, productName, price, quantity, totalAmount, category }
       );
       return {...response.data, id};
@@ -77,7 +77,7 @@ export const deleteSale = createAsyncThunk(
   async ({id}, { rejectWithValue }) => {
     try {
       const response = await axiosInstance.delete(
-        `users/sales/delete-sale/${id}`
+        `/users/sales/delete-sale/${id}`
       );
       return {...response.data, id};
     } catch (error) {
@@ -95,7 +95,7 @@ export const getMostSoldProducts = createAsyncThunk(
   "sales/getMostSoldProducts",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.get("users/sales/most-sold");
+      const response = await axiosInstance.get("/users/sales/most-sold");
       return response.data;
     } catch (error) {
       return rejectWithValue(
